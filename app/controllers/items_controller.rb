@@ -1,5 +1,10 @@
 class ItemsController < ApplicationController
   def show
-    # @product = Product.find(params[:id]) 
+    @products = Product.all
+    @products = ProductImage.all
+    @product = ProductImage.find(params[:id])
+    @product = Product.find(params[:id]) 
+    # @categories = Category.all
+    # @category = Category.find(category_id)
   end 
 end
