@@ -19,11 +19,11 @@
     .content
       .content__form
         .content__form__name
-          product
+          = @product.name
         .content__form__body
           %ul
             %li
-              = image_tag src="https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png", class: 'photo'
+              = image_tag @image.image_name, class: 'photo'
               %ul.gallery
                 %li
                   = image_tag src="https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png", class: 'gallery'
@@ -33,7 +33,7 @@
                   = image_tag src="https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/9/a003.png", class: 'gallery'
         .content__form__price
           .price
-            ¥10000
+            = @product.price
           .tax
             (税込) 送料込み
         .content__form__text
@@ -42,11 +42,12 @@
           %table
             %tr
               %th 出品者
-              %td hoge
+              %td 
+                = @product.name
             %tr
               %th カテゴリー
               %td
-                = link_to 'ベビー・キッズ', '#'
+                -# = link_to @category.name,'#'
                 %br
                 = link_to 'おもちゃ', '#'
                 %br
@@ -54,22 +55,27 @@
             %tr
               %th ブランド
               %td
+                = @product.brand_name
             %tr
               %th 商品のサイズ
               %td
+                = @product.size
             %tr
               %th 商品の状態
-              %td 新品/未使用
+              %td
+                = @product.explanation
             %tr
               %th 配送料の負担
-              %td 着払い（購入者負担）
+              %td
+                = @product.postage_code
             %tr
               %th 発送元の地域
               %td
-                = link_to '東京都', '#'
+                = link_to @product.status, '#'
             %tr
               %th 発送日の目安
-              %td 1-2日で発送
+              %td
+                = @product.delivery_time_code
         .content__form__option
           .option
             .like

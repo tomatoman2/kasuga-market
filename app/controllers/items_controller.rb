@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
   def show
-    # @product = Product.find(params[:id]) 
+    @products = Product.all
+    @product = Product.find(params[:id]) 
+    @images = ProductImage.all
+    @image = ProductImage.find(params[:id])
   end 
 end
