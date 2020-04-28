@@ -1,25 +1,4 @@
-//商品出品ボタン
-.btn {
-  position: fixed;
-  width: 120px;
-  background: #3CCACE;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  padding: 15px;
-  &__text {
-    color: #fff;
-    display: block;
-    font-size: 18px;
-    text-decoration: none;
-    margin-bottom: 5px;
-    .btn__camera {
-      vertical-align: bottom;
-    }
-  }
-}
-//フッター
+
 .download {
   background-image: url(bg-appBanner-pict.jpg);
   padding: 100px 40px;
@@ -30,12 +9,14 @@
     color: #fff;
     text-align: center;
     &__title {
+      margin: 0 auto;
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       font-size: 24px;
       font-weight: bold;
       line-height: 1.4;
     }
     &__text {
+      margin: 0 auto;
       font-size: 35px;
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
     }
@@ -50,9 +31,13 @@
       .icon:first-child {
         margin-right: 10px;
       }
+      .icon:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
+
 .footer {
   padding: 60px 0;
   color: #fff;
@@ -81,6 +66,9 @@
           font-size: 12px;
           line-height: 32px;
         }
+        a:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -97,4 +85,29 @@
     font-size: 14px;
     margin: 0;
   }
+}
+
+.btn {
+  position: fixed;
+  width: 120px;
+  background: #3CCACE;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  padding: 15px;
+  cursor: pointer;
+  &__text {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    .btn__camera {
+      vertical-align: bottom;
+    }
+  }
+}
+.btn:hover {
+  opacity: 0.9;
 }

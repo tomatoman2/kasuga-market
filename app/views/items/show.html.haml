@@ -23,7 +23,7 @@
         .content__form__body
           %ul
             %li
-              -# = image_tag @product.url, class: 'photo'
+              = image_tag @image.image_name, class: 'photo'
               %ul.gallery
                 %li
                   = image_tag src="https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/7/a001.png", class: 'gallery'
@@ -55,6 +55,7 @@
             %tr
               %th ブランド
               %td
+                = @product.brand_name
             %tr
               %th 商品のサイズ
               %td
@@ -65,14 +66,16 @@
                 = @product.explanation
             %tr
               %th 配送料の負担
-              %td 着払い（購入者負担）
+              %td
+                = @product.postage_code
             %tr
               %th 発送元の地域
               %td
                 = link_to @product.status, '#'
             %tr
               %th 発送日の目安
-              %td 1-2日で発送
+              %td
+                = @product.delivery_time_code
         .content__form__option
           .option
             .like
