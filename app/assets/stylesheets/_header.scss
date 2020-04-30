@@ -6,10 +6,12 @@ body {
   padding: 0;
 }
 .header {
+  background-color: white;
   padding: 0 60px;
   &__main {
     max-width: 1040px;
     width: 100%;
+    min-height: 82px;
     margin: 0 auto;
     padding: 15px 0 0;
     &__title {
@@ -54,7 +56,6 @@ body {
     &__navi {
       font-size: 14px;
       display: flex;
-      margin-bottom: 10px;
       .navi__left {
         list-style: none;
         display: flex;
@@ -63,7 +64,6 @@ body {
         .choice {
           color: #333;
           text-decoration: none;
-          // line-height: 32px;
           padding-right: 30px;
         }
         .choice:hover {
@@ -77,7 +77,6 @@ body {
         margin-top: 0;
         a {
           color: #333;
-          // line-height: 38px;
           padding: 0 0 0 16px;
           text-decoration: none;
         }
