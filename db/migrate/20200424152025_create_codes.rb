@@ -6,7 +6,6 @@ class CreateCodes < ActiveRecord::Migration[5.2]
       t.integer :code_id, null: false
       t.string :code_name, null: false
       t.timestamps
-      t.timestamps
     end
   end
 end

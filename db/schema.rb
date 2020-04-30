@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_04_24_152034) do
   end
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "class", null: false
+    t.integer "level", null: false
     t.integer "parent_id"
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -59,11 +59,8 @@ ActiveRecord::Schema.define(version: 2020_04_24_152034) do
   end
 
   create_table "credit_cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "card_number", null: false
-    t.integer "expiration_year", null: false
-    t.integer "expiration_month", null: false
-    t.integer "security_code", null: false
-    t.string "card_name", null: false
+    t.string "customer_id", null: false
+    t.string "card_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -121,7 +118,7 @@ ActiveRecord::Schema.define(version: 2020_04_24_152034) do
     t.string "nickname", null: false
     t.string "name", null: false
     t.string "kana_name", null: false
-    t.datetime "birthday", null: false
+    t.date "birthday", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

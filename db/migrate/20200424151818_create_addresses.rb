@@ -9,7 +9,6 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :telehone_number, unique: true
       t.references :user, null: false, foreign_key: true
       t.timestamps
-      t.timestamps
     end
   end
 end
